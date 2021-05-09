@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EoZ-gS-baB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EoZ-gS-baB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="dQq-Bq-WBg">
             <objects>
-                <viewController storyboardIdentifier="homeViewController" id="G9U-z9-OwM" customClass="HomeViewController" customModule="Mercury_Smart_Store" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeViewController" id="G9U-z9-OwM" customClass="HomeViewController" customModule="Mercury_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XJd-gp-ehC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome to Mercury!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DgD-SV-3QK">
-                                <rect key="frame" x="129" y="431" width="156" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9s4-hK-OX4">
+                                <rect key="frame" x="88" y="409" width="238" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
+                                <state key="normal" title="Start shopping"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hqb-kF-N2b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="fD4-rs-1Qz">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="0yz-YI-kZN">
+                            <textField key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MERCURY" minimumFontSize="17" id="6Nn-22-SXE">
+                                <rect key="frame" x="20" y="3" width="150" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="gNG-q2-6ZK">
-                            <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
+                            <imageReference key="image" image="sign-out" symbolScale="large"/>
+                            <connections>
+                                <action selector="logOutTapped:" destination="G9U-z9-OwM" id="SGR-Ph-Woj"/>
+                                <segue destination="cJg-xd-6fv" kind="presentation" destinationCreationSelector="transition:" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Vwa-nL-YNc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="userProfileButton" destination="gNG-q2-6ZK" id="Bn2-Ze-FrT"/>
+                        <outlet property="startShoppingButton" destination="9s4-hK-OX4" id="2fv-Mz-uAD"/>
+                        <outlet property="titleTextField" destination="6Nn-22-SXE" id="BXB-JI-S2k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2JH-oK-Kaj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1809" y="-495"/>
+            <point key="canvasLocation" x="-1810.144927536232" y="-495.53571428571428"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Wyt-BQ-2ZH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="cJg-xd-6fv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NZ9-wF-zc9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPx-lO-aFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1282" y="-710"/>
         </scene>
         <!--Shop-->
         <scene sceneID="ZTp-Pp-9t9">
@@ -62,8 +91,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="shop-white" width="30" height="30"/>
+        <image name="sign-out" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

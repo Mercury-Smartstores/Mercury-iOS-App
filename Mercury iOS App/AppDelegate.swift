@@ -11,6 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = DesignHandler.getUIColorFromHex(0xFFFFFF)
         UITabBar.appearance().unselectedItemTintColor = DesignHandler.getUIColorFromHex(0xCAC9C6)
         UINavigationBar.appearance().barTintColor = Constants.Colors.principalRedBackground
+        UIBarButtonItem.appearance().tintColor = .white
         return true
     }
 

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         view.backgroundColor = Constants.Colors.principalRedBackground
         DesignHandler.styleTextField(emailTextField)
         DesignHandler.styleTextField(passwordTextField)
-        DesignHandler.styleFilledButton(logInButton)
+        DesignHandler.styleFilledButton(logInButton, UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1), UIColor.white)
     }
     
     /**

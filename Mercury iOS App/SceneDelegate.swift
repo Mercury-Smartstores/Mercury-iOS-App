@@ -13,12 +13,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        /*do {
-            try Auth.auth().signOut()
-        } catch {
-            print("Error info: \(error)")
-        }*/
-        
         if Auth.auth().currentUser != nil {
             ViewTransition.transitionTo(window, storyboard, Constants.ViewControllersIds.tabBarController)
         }

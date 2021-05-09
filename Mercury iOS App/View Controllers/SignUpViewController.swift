@@ -28,7 +28,7 @@ class SignUpViewController: UIViewController {
         DesignHandler.styleTextField(lastNameTextField)
         DesignHandler.styleTextField(emailTextField)
         DesignHandler.styleTextField(passwordTextField)
-        DesignHandler.styleFilledButton(signUpButton)
+        DesignHandler.styleFilledButton(signUpButton, UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1), UIColor.white)
     }
     
     /**

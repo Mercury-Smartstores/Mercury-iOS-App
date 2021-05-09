@@ -28,11 +28,11 @@ class DesignHandler {
         
     }
     
-    static func styleFilledButton(_ button:UIButton) {
+    static func styleFilledButton(_ button:UIButton, _ backgroundColor:UIColor, _ tintColor:UIColor) {
         // Filled rounded corner style
-        button.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        button.backgroundColor = backgroundColor
         button.layer.cornerRadius = 25.0
-        button.tintColor = UIColor.white
+        button.tintColor = tintColor
     }
     
     static func styleHollowButton(_ button:UIButton) {
