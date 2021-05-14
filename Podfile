@@ -11,6 +11,5 @@ target 'Mercury iOS App' do
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
-  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
-  #pod 'Hero'
+  pod 'Socket.IO-Client-Swift', '~> 16.0.1'
 end

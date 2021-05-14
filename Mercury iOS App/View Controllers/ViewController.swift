@@ -52,6 +52,7 @@ class ViewController: UIViewController {
                     ErrorHandler.showError(self.errorLabel, err!.localizedDescription)
                 }
                 else{
+                    Client.shared.socket.connect()
                     ViewTransition.transitionTo(self.view.window, self.storyboard, Constants.ViewControllersIds.tabBarController)
                 }
             }

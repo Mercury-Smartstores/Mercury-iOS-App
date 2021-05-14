@@ -31,12 +31,11 @@
 		65FA80E9262D8A32003CD2DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FA80E8262D8A31003CD2DA /* Constants.swift */; };
 		65FA8104262DACC6003CD2DA /* ViewTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FA8103262DACC6003CD2DA /* ViewTransition.swift */; };
 		65FA8107262DAE39003CD2DA /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FA8106262DAE39003CD2DA /* ErrorHandler.swift */; };
-		7EF6665AD56DE5F2C162EFE9 /* Pods_Mercury_iOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA11474BE1B930888451597C /* Pods_Mercury_iOS_App.framework */; };
+		EB302CF6AD2EC6D5E960D772 /* Pods_Mercury_iOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B054769B75F9C10A59A442AB /* Pods_Mercury_iOS_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		33190EF0F0B33B9AD977ADA2 /* Pods-Mercury iOS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercury iOS App.debug.xcconfig"; path = "Target Support Files/Pods-Mercury iOS App/Pods-Mercury iOS App.debug.xcconfig"; sourceTree = "<group>"; };
-		50BB288FD3EC4E23F8316428 /* Pods-Mercury iOS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercury iOS App.release.xcconfig"; path = "Target Support Files/Pods-Mercury iOS App/Pods-Mercury iOS App.release.xcconfig"; sourceTree = "<group>"; };
+		231288730966BF4DD8767763 /* Pods-Mercury iOS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercury iOS App.release.xcconfig"; path = "Target Support Files/Pods-Mercury iOS App/Pods-Mercury iOS App.release.xcconfig"; sourceTree = "<group>"; };
 		65179A74262C9D9F00B9D8F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65179A77262C9E1A00B9D8F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		65179A7A262C9E2600B9D8F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +62,8 @@
 		65FA80E8262D8A31003CD2DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		65FA8103262DACC6003CD2DA /* ViewTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTransition.swift; sourceTree = "<group>"; };
 		65FA8106262DAE39003CD2DA /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
-		EA11474BE1B930888451597C /* Pods_Mercury_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercury_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B2C95AFAF3947C7C3C1BDC2 /* Pods-Mercury iOS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercury iOS App.debug.xcconfig"; path = "Target Support Files/Pods-Mercury iOS App/Pods-Mercury iOS App.debug.xcconfig"; sourceTree = "<group>"; };
+		B054769B75F9C10A59A442AB /* Pods_Mercury_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercury_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF6665AD56DE5F2C162EFE9 /* Pods_Mercury_iOS_App.framework in Frameworks */,
+				EB302CF6AD2EC6D5E960D772 /* Pods_Mercury_iOS_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,18 +81,10 @@
 		26A6240FE272AD6202209336 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				33190EF0F0B33B9AD977ADA2 /* Pods-Mercury iOS App.debug.xcconfig */,
-				50BB288FD3EC4E23F8316428 /* Pods-Mercury iOS App.release.xcconfig */,
+				8B2C95AFAF3947C7C3C1BDC2 /* Pods-Mercury iOS App.debug.xcconfig */,
+				231288730966BF4DD8767763 /* Pods-Mercury iOS App.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		531760C3C86E072104DD4619 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EA11474BE1B930888451597C /* Pods_Mercury_iOS_App.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6527D7DA263C1A8A00402829 /* Components */ = {
@@ -146,7 +138,7 @@
 				6576480C26298D8F001E7AF6 /* Mercury iOS App */,
 				6576480B26298D8F001E7AF6 /* Products */,
 				26A6240FE272AD6202209336 /* Pods */,
-				531760C3C86E072104DD4619 /* Frameworks */,
+				8970EFAFC7C29AD99530338F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +201,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		8970EFAFC7C29AD99530338F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B054769B75F9C10A59A442AB /* Pods_Mercury_iOS_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,11 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6576481E26298D8F001E7AF6 /* Build configuration list for PBXNativeTarget "Mercury iOS App" */;
 			buildPhases = (
-				055610F53011932096C5946F /* [CP] Check Pods Manifest.lock */,
+				BF14CB90F27EE5C648273A9E /* [CP] Check Pods Manifest.lock */,
 				6576480626298D8F001E7AF6 /* Sources */,
 				6576480726298D8F001E7AF6 /* Frameworks */,
 				6576480826298D8F001E7AF6 /* Resources */,
-				E54152044660AEC975C6EFBE /* [CP] Embed Pods Frameworks */,
+				CA345F4E78074F2DAFF45F62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +283,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		055610F53011932096C5946F /* [CP] Check Pods Manifest.lock */ = {
+		BF14CB90F27EE5C648273A9E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,7 +305,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E54152044660AEC975C6EFBE /* [CP] Embed Pods Frameworks */ = {
+		CA345F4E78074F2DAFF45F62 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -488,7 +488,7 @@
 		};
 		6576481F26298D8F001E7AF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33190EF0F0B33B9AD977ADA2 /* Pods-Mercury iOS App.debug.xcconfig */;
+			baseConfigurationReference = 8B2C95AFAF3947C7C3C1BDC2 /* Pods-Mercury iOS App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -512,7 +512,7 @@
 		};
 		6576482026298D8F001E7AF6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50BB288FD3EC4E23F8316428 /* Pods-Mercury iOS App.release.xcconfig */;
+			baseConfigurationReference = 231288730966BF4DD8767763 /* Pods-Mercury iOS App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

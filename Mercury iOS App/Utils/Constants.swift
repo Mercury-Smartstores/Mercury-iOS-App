@@ -26,8 +26,7 @@ struct Constants {
     }
     
     struct Network {
-        static let port: String = "3000"
-        static let host: String = "http://localhost"
+        static let serverUrl: String = "ws://localhost:3000"
     }
     
 }

@@ -5,7 +5,6 @@ import SwiftUI
 class CartViewController: UIViewController {
 
     @IBOutlet weak var cartTitleTextField: UITextField!
-    @ObservedObject var client = Client()
     var itemsTableView = UITableView()
     var items: [Item] = []
     @IBOutlet weak var testButtonRequest: UIBarButtonItem!
@@ -33,9 +32,9 @@ class CartViewController: UIViewController {
         itemsTableView.isUserInteractionEnabled = false
         itemsTableView.register(CartItemCell.self, forCellReuseIdentifier: Constants.TableViewsIds.cartItemCell)
         itemsTableView.pin(to: view)
-        client.cartItems.forEach { item in
+        /*client.cartItems.forEach { item in
             items.append(Item(image: UIImage(named: "grocery.png")!, name: item))
-        }
+        }*/
     }
     
     func fetchData() -> [Item] {
@@ -45,7 +44,7 @@ class CartViewController: UIViewController {
     }
     
     @IBAction func clickRequestItem(_ sender: Any) {
-        client.socket.emit("add item test", "")
+        //client.socket.emit("add item test", "")
     }
 }
 
