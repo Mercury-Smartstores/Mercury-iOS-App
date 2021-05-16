@@ -27,6 +27,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
                                 <state key="normal" title="Start shopping"/>
+                                <connections>
+                                    <action selector="startShoppingTapped:" destination="G9U-z9-OwM" eventType="touchUpInside" id="nMp-Go-1Yt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hqb-kF-N2b"/>

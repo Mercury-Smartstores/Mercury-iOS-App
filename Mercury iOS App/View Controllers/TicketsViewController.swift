@@ -9,11 +9,9 @@ class TicketsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         dateFormatter.dateStyle = .short
         setUpElements()
         tickets = fetchData()
-        //configureTableView()
     }
     
     func setUpElements() {
@@ -45,6 +43,14 @@ extension TicketsViewController: UITableViewDelegate, UITableViewDataSource {
         })
         cell.set(item: Item(image: UIImage(named: "receipt-approved.png")!, name: "Ticket from " + dateFormatter.string(from: ticket.date), price: total))
         return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let selectionIndexPath = ticketsTableView.indexPathForSelectedRow {
+            ticketsTableView.deselectRow(at: selectionIndexPath, animated: animated)
+        }
     }
     
 }

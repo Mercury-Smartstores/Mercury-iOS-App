@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         setUpElements()
     }
     
@@ -52,7 +51,6 @@ class ViewController: UIViewController {
                     ErrorHandler.showError(self.errorLabel, err!.localizedDescription)
                 }
                 else{
-                    Client.shared.socket.connect()
                     ViewTransition.transitionTo(self.view.window, self.storyboard, Constants.ViewControllersIds.tabBarController)
                 }
             }

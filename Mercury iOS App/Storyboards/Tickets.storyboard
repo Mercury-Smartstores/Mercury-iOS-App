@@ -64,6 +64,7 @@
                                             <outlet property="imageViewCell" destination="uOF-FN-wIP" id="ygl-cg-SPe"/>
                                             <outlet property="nameCell" destination="nCG-jw-aNA" id="grT-XX-F47"/>
                                             <outlet property="priceCell" destination="PO6-bH-oQr" id="56p-Le-8Kz"/>
+                                            <segue destination="xeh-az-0ZW" kind="show" id="dwd-i2-wWH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -100,6 +101,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ko-n2-b9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4062.3188405797105" y="1124.3303571428571"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="4Ss-VC-RGQ">
+            <objects>
+                <viewController id="xeh-az-0ZW" customClass="TicketDetailViewController" customModule="Mercury_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="K78-mt-lIe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customItemCell" id="kXJ-U0-p93" customClass="CustomTableViewCell" customModule="Mercury_iOS_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kXJ-U0-p93" id="6PZ-ck-BQ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEs-P2-dXH">
+                                            <rect key="frame" x="11" y="11" width="90.5" height="68"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="68" id="Ihm-CY-mSQ"/>
+                                                <constraint firstAttribute="width" constant="90.5" id="acU-2y-5nA"/>
+                                                <constraint firstAttribute="width" secondItem="KEs-P2-dXH" secondAttribute="height" multiplier="4:3" id="tPf-ZU-nFA"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oML-k3-3FZ">
+                                            <rect key="frame" x="109.5" y="11" width="47" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeY-LT-8Kq">
+                                            <rect key="frame" x="350" y="57.5" width="44" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oML-k3-3FZ" firstAttribute="leading" secondItem="KEs-P2-dXH" secondAttribute="trailing" constant="8" symbolic="YES" id="3CZ-vc-0kU"/>
+                                        <constraint firstItem="KEs-P2-dXH" firstAttribute="leading" secondItem="6PZ-ck-BQ8" secondAttribute="leading" constant="11" id="7jN-Ad-ILM"/>
+                                        <constraint firstItem="oML-k3-3FZ" firstAttribute="top" secondItem="6PZ-ck-BQ8" secondAttribute="topMargin" id="PKh-Vz-Uvl"/>
+                                        <constraint firstItem="oeY-LT-8Kq" firstAttribute="trailing" secondItem="6PZ-ck-BQ8" secondAttribute="trailingMargin" id="amh-EU-rMS"/>
+                                        <constraint firstItem="oeY-LT-8Kq" firstAttribute="bottom" secondItem="6PZ-ck-BQ8" secondAttribute="bottomMargin" id="egS-xN-fSS"/>
+                                        <constraint firstItem="KEs-P2-dXH" firstAttribute="top" secondItem="6PZ-ck-BQ8" secondAttribute="top" constant="11" id="rYy-7Q-BFH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageViewCell" destination="KEs-P2-dXH" id="hfx-Wg-ESf"/>
+                                    <outlet property="nameCell" destination="oML-k3-3FZ" id="Ari-WS-71g"/>
+                                    <outlet property="priceCell" destination="oeY-LT-8Kq" id="FmM-Xg-64n"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="Jrx-bx-asI"/>
+                    <connections>
+                        <outlet property="ticketTableView" destination="K78-mt-lIe" id="fCi-Qa-gpA"/>
+                        <outlet property="titleNavigationItem" destination="Jrx-bx-asI" id="obb-rQ-Aw7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mEb-Oh-FHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4930" y="1124"/>
         </scene>
         <!--Tickets-->
         <scene sceneID="un0-zz-FXR">

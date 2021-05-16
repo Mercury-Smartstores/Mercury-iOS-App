@@ -13,6 +13,7 @@
 		6527D7E5263C2CF300402829 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6527D7E4263C2CF300402829 /* Item.swift */; };
 		6527D7E8263C31CE00402829 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6527D7E7263C31CE00402829 /* UIViewExt.swift */; };
 		6547776E26372503001897DF /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6547776826372503001897DF /* Montserrat-Bold.ttf */; };
+		654C72DB265138E90080C013 /* TicketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C72DA265138E90080C013 /* TicketDetailViewController.swift */; };
 		655ABAD426505C96000C0A49 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655ABAD326505C96000C0A49 /* Ticket.swift */; };
 		655ABAD826512B1D000C0A49 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655ABAD726512B1D000C0A49 /* CustomTableViewCell.swift */; };
 		6576480E26298D8F001E7AF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576480D26298D8F001E7AF6 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 		6527D7E4263C2CF300402829 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		6527D7E7263C31CE00402829 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		6547776826372503001897DF /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		654C72DA265138E90080C013 /* TicketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailViewController.swift; sourceTree = "<group>"; };
 		655ABAD326505C96000C0A49 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		655ABAD726512B1D000C0A49 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		6576480A26298D8F001E7AF6 /* Mercury iOS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mercury iOS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 				65179A7A262C9E2600B9D8F4 /* SignUpViewController.swift */,
 				65B4A1BF2634311A00F0CF20 /* CartViewController.swift */,
 				65B4A1C2263431C700F0CF20 /* TicketsViewController.swift */,
+				654C72DA265138E90080C013 /* TicketDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				65179A78262C9E1A00B9D8F4 /* HomeViewController.swift in Sources */,
 				65FA80E9262D8A32003CD2DA /* Constants.swift in Sources */,
 				65A3A3FC263C041D0011BD46 /* Client.swift in Sources */,
+				654C72DB265138E90080C013 /* TicketDetailViewController.swift in Sources */,
 				65FA8104262DACC6003CD2DA /* ViewTransition.swift in Sources */,
 				65B4A1C02634311A00F0CF20 /* CartViewController.swift in Sources */,
 				6527D7E8263C31CE00402829 /* UIViewExt.swift in Sources */,

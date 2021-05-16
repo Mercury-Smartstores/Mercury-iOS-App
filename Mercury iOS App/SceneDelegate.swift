@@ -14,7 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if Auth.auth().currentUser != nil {
-            Client.shared.socket.connect()
             ViewTransition.transitionTo(window, storyboard, Constants.ViewControllersIds.tabBarController)
         }
     }

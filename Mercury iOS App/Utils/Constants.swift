@@ -30,4 +30,9 @@ struct Constants {
         static let serverUrl: String = "ws://localhost:3000"
     }
     
+    struct Notifications {
+        static let clientEnteredShop: String = "clientEnteredShop"
+        static let addItemToCart: String = "addItemToCart"
+    }
+    
 }

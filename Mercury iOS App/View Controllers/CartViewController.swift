@@ -6,30 +6,39 @@ class CartViewController: UIViewController {
 
     @IBOutlet weak var cartTitleTextField: UITextField!
     @IBOutlet weak var cartTableView: UITableView!
-    var items: [Item] = []
-    @ObservedObject var client: Client = Client.shared
+    var items: [Item] = [] // Items are unique according to Mercury specifications
+    var client: Client = Client.shared
     @IBOutlet weak var testButtonRequest: UIBarButtonItem!
+    @IBOutlet weak var warningLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setUpElements()
-        items = fetchData()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showShoppingCart), name: NSNotification.Name(rawValue: Constants.Notifications.clientEnteredShop), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.addItemToCart), name: NSNotification.Name(rawValue: Constants.Notifications.addItemToCart), object: nil)
     }
     
     func setUpElements() {
+        cartTableView.alpha = 0
         cartTitleTextField.textColor = .white
         cartTitleTextField.backgroundColor = .clear
         cartTitleTextField.isUserInteractionEnabled = false
+        warningLabel.center = self.view.center
     }
     
-    func fetchData() -> [Item] {
-        let item1 = Item(image: UIImage(named: "watermelon.png")!, name: "Watermelon", price: 1.45)
-        let item2 = Item(image: UIImage(named: "milk.png")!, name: "Milk", price: 0.99)
-        return [item1, item2]
+    @objc func showShoppingCart() {
+        warningLabel.alpha = 0
+        cartTableView.alpha = 1
     }
     
-    @IBAction func clickRequestItem(_ sender: Any) {
+    @objc func addItemToCart(_ notification: NSNotification) {
+        if let item = notification.userInfo?["item"] as? Item {
+            items.append(item)
+            cartTableView.reloadData()
+        }
+    }
+    
+    @IBAction func clickRequestItem(_ sender: Any) { // Remove when Store Manager is done
         client.socket.emit("send item", "")
     }
     

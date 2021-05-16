@@ -13,7 +13,6 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         setUpElements()
     }
     
@@ -69,7 +68,6 @@ class SignUpViewController: UIViewController {
                             ErrorHandler.showError(self.errorLabel, "Error while adding user to collection")
                         } else {
                             // Transition to home screen
-                            Client.shared.socket.connect()
                             ViewTransition.transitionTo(self.view.window, self.storyboard, Constants.ViewControllersIds.tabBarController)
                         }
                     }
