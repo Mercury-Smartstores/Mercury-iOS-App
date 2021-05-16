@@ -21,8 +21,8 @@ class TicketsViewController: UIViewController {
     }
     
     func fetchData() -> [Ticket] {
-        let ticket1 = Ticket(date: Date(timeIntervalSinceReferenceDate: 123456789.0), items: [Item(image: UIImage(named: "watermelon.png")!, name: "Watermelon", price: 1.45)]) // Since 2001
-        let ticket2 = Ticket(date: Date(timeIntervalSinceReferenceDate: -987654321.0), items: [Item(image: UIImage(named: "milk.png")!, name: "Milk", price: 0.99)])
+        let ticket1 = Ticket(date: Date(timeIntervalSinceReferenceDate: 123435456789.0), items: [Item(image: UIImage(named: "watermelon.png")!, name: "Watermelon", price: 1.45)]) // Since 2001
+        let ticket2 = Ticket(date: Date(timeIntervalSinceReferenceDate: 1234354556789.0), items: [Item(image: UIImage(named: "milk.png")!, name: "Milk", price: 0.99)])
         return [ticket1, ticket2]
     }
     

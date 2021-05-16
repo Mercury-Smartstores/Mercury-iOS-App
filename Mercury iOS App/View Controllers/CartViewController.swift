@@ -3,7 +3,7 @@ import SocketIO
 import SwiftUI
 
 class CartViewController: UIViewController {
-
+    
     @IBOutlet weak var cartTitleTextField: UITextField!
     @IBOutlet weak var cartTableView: UITableView!
     var items: [Item] = [] // Items are unique according to Mercury specifications
@@ -14,8 +14,13 @@ class CartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
+        loadObservers()
+    }
+    
+    func loadObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.showShoppingCart), name: NSNotification.Name(rawValue: Constants.Notifications.clientEnteredShop), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.addItemToCart), name: NSNotification.Name(rawValue: Constants.Notifications.addItemToCart), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.removeItemFromCart), name: NSNotification.Name(rawValue: Constants.Notifications.removeItemFromCart), object: nil)
     }
     
     func setUpElements() {
@@ -40,8 +45,22 @@ class CartViewController: UIViewController {
         }
     }
     
-    @IBAction func clickRequestItem(_ sender: Any) { // Remove when Store Manager is done
-        client.socket.emit("send item", "")
+    @objc func removeItemFromCart(_ notification: NSNotification) {
+        if let item = notification.userInfo?["item"] as? Item {
+            items.removeAll{$0 == item}
+            cartTableView.reloadData()
+        }
+    }
+    
+    // Just for quick testing purposes
+    // Remove when Store Manager is done
+    @IBAction func clickRequestItem(_ sender: Any) {
+        let number = Int.random(in: 0...10)
+        if number%2 == 0 {
+            client.socket.emit("add item", "")
+        } else {
+            client.socket.emit("remove item", "")
+        }
     }
     
 }

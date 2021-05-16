@@ -33,6 +33,7 @@ struct Constants {
     struct Notifications {
         static let clientEnteredShop: String = "clientEnteredShop"
         static let addItemToCart: String = "addItemToCart"
+        static let removeItemFromCart: String = "removeItemFromCart"
     }
     
 }

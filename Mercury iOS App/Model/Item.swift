@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 struct Item : Equatable {
-    var image: UIImage
+    var image: UIImage?
     var name: String
     var price: Double
     
