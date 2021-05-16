@@ -17,23 +17,23 @@ class CartViewController: UIViewController {
         loadObservers()
     }
     
-    func loadObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.showShoppingCart), name: NSNotification.Name(rawValue: Constants.Notifications.clientEnteredShop), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.addItemToCart), name: NSNotification.Name(rawValue: Constants.Notifications.addItemToCart), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.removeItemFromCart), name: NSNotification.Name(rawValue: Constants.Notifications.removeItemFromCart), object: nil)
-    }
-    
     func setUpElements() {
-        cartTableView.alpha = 0
+        if client.socket.status == SocketIOStatus.connected || client.socket.status == SocketIOStatus.connecting {
+            warningLabel.alpha = 0
+            cartTableView.alpha = 1
+        } else {
+            warningLabel.alpha = 1
+            cartTableView.alpha = 0
+        }
         cartTitleTextField.textColor = .white
         cartTitleTextField.backgroundColor = .clear
         cartTitleTextField.isUserInteractionEnabled = false
         warningLabel.center = self.view.center
     }
     
-    @objc func showShoppingCart() {
-        warningLabel.alpha = 0
-        cartTableView.alpha = 1
+    func loadObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.addItemToCart), name: NSNotification.Name(rawValue: Constants.Notifications.addItemToCart), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.removeItemFromCart), name: NSNotification.Name(rawValue: Constants.Notifications.removeItemFromCart), object: nil)
     }
     
     @objc func addItemToCart(_ notification: NSNotification) {

@@ -16,7 +16,7 @@
         <!--Cart View Controller-->
         <scene sceneID="2Op-pk-7UV">
             <objects>
-                <viewController id="Csz-4B-gbt" customClass="CartViewController" customModule="Mercury_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cartViewController" id="Csz-4B-gbt" customClass="CartViewController" customModule="Mercury_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ap6-76-eLv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

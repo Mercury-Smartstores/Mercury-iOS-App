@@ -2,13 +2,13 @@ import FirebaseAuth
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var startShoppingButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUpElements()
     }
     
@@ -43,13 +43,12 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startShoppingTapped(_ sender: Any) {
-        startShoppingButton.isEnabled = false
-        DispatchQueue.main.async {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constants.Notifications.clientEnteredShop), object: nil)
-            Client.shared.socket.connect()
-            if let tabBarController = self.view.window!.rootViewController as? UITabBarController {
-                tabBarController.selectedIndex = 1
-            }
+        self.startShoppingButton.isEnabled = false
+        Client.shared.socket.connect()
+        if let tabBarController = self.view.window!.rootViewController as? UITabBarController {
+            tabBarController.selectedIndex = 1
         }
     }
+    
 }
+
