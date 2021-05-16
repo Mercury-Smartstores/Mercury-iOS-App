@@ -13,6 +13,7 @@ struct Constants {
     
     struct TableViewsIds {
         static let cartItemCell: String = "cartItemCell"
+        static let customItemCell: String = "customItemCell"
     }
     
     struct Colors {
