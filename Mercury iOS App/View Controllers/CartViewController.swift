@@ -33,8 +33,10 @@ class CartViewController: UIViewController {
     
     @objc func addItemToCart(_ notification: NSNotification) {
         if let item = notification.userInfo?["item"] as? Item {
-            items.append(item)
-            cartTableView.reloadData()
+            if !items.contains(item) {
+                items.append(item)
+                cartTableView.reloadData()
+            }
         }
     }
     
