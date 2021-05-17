@@ -32,8 +32,14 @@ class CartViewController: UIViewController {
     }
     
     func loadObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.clientEnteredShop), name: NSNotification.Name(rawValue: Constants.Notifications.clientEnteredShop), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.addItemToCart), name: NSNotification.Name(rawValue: Constants.Notifications.addItemToCart), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.removeItemFromCart), name: NSNotification.Name(rawValue: Constants.Notifications.removeItemFromCart), object: nil)
+    }
+    
+    @objc func clientEnteredShop(_ notification: NSNotification) {
+        warningLabel.alpha = 0
+        cartTableView.alpha = 1
     }
     
     @objc func addItemToCart(_ notification: NSNotification) {

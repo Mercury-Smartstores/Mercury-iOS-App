@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
     @IBAction func startShoppingTapped(_ sender: Any) {
         self.startShoppingButton.isEnabled = false
         Client.shared.socket.connect()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constants.Notifications.clientEnteredShop), object: nil)
         if let tabBarController = self.view.window!.rootViewController as? UITabBarController {
             tabBarController.selectedIndex = 1
         }
