@@ -9,11 +9,13 @@ struct Constants {
         static let tabBarController: String = "tabBarController"
         static let userProfileViewController: String = "userProfileViewController"
         static let initialScreenViewController: String = "initialScreenViewController"
+        static let ticketResumeViewController: String = "ticketResumeViewController"
     }
     
     struct TableViewsIds {
-        static let cartItemCell: String = "cartItemCell"
-        static let customItemCell: String = "customItemCell"
+        static let cartTableViewCell: String = "cartTableViewCell"
+        static let ticketsTableViewCell: String = "ticketsTableViewCell"
+        static let ticketDetailTableViewCell: String = "ticketDetailTableViewCell"
     }
     
     struct Colors {
@@ -34,6 +36,7 @@ struct Constants {
         static let clientEnteredShop: String = "clientEnteredShop"
         static let addItemToCart: String = "addItemToCart"
         static let removeItemFromCart: String = "removeItemFromCart"
+        static let clientExit: String = "clientExit"
     }
     
 }

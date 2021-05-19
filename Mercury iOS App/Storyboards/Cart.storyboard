@@ -32,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customItemCell" id="DpH-SV-8SP" customClass="CustomTableViewCell" customModule="Mercury_iOS_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartTableViewCell" id="DpH-SV-8SP" customClass="CartTableViewCell" customModule="Mercury_iOS_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DpH-SV-8SP" id="bxf-yH-TmD">
@@ -70,9 +70,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageViewCell" destination="OAO-vI-pkg" id="7g3-YI-e6T"/>
-                                            <outlet property="nameCell" destination="gd9-jp-ons" id="7aC-Zc-ahg"/>
-                                            <outlet property="priceCell" destination="Geo-EE-BPx" id="AOL-UR-2jh"/>
+                                            <outlet property="imageViewCell" destination="OAO-vI-pkg" id="Xdm-0H-uMH"/>
+                                            <outlet property="nameCell" destination="gd9-jp-ons" id="pqm-ek-3q9"/>
+                                            <outlet property="priceCell" destination="Geo-EE-BPx" id="U0x-ll-KCD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -100,21 +100,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Hgi-VJ-RpL">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kJB-jI-W1l">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="clickRequestItem:" destination="Csz-4B-gbt" eventType="touchUpInside" id="yJm-eZ-lVU"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cartTableView" destination="Sd4-gy-BfZ" id="73Z-F5-Qpm"/>
                         <outlet property="cartTitleTextField" destination="V1z-of-5Nm" id="R37-JL-b1y"/>
-                        <outlet property="testButtonRequest" destination="Hgi-VJ-RpL" id="YmK-U1-MhM"/>
                         <outlet property="warningLabel" destination="rZh-bI-8vY" id="VWw-7Y-4Xt"/>
                     </connections>
                 </viewController>

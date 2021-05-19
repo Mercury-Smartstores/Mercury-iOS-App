@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qrm-tE-p2E">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,18 +18,18 @@
             <objects>
                 <viewController id="Wfn-op-giA" customClass="TicketsViewController" customModule="Mercury_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qpp-lz-0na">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ebI-5c-4jT">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customItemCell" id="lza-kl-Cbd" customClass="CustomTableViewCell" customModule="Mercury_iOS_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ticketsTableViewCell" id="lza-kl-Cbd" customClass="TicketsTableViewCell" customModule="Mercury_iOS_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lza-kl-Cbd" id="XG7-Rf-K7h">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uOF-FN-wIP">
@@ -39,13 +39,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCG-jw-aNA">
-                                                    <rect key="frame" x="167" y="11" width="44" height="21.5"/>
+                                                    <rect key="frame" x="167" y="11.000000000000002" width="44" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO6-bH-oQr">
-                                                    <rect key="frame" x="350" y="57.5" width="44" height="21.5"/>
+                                                    <rect key="frame" x="326.33333333333331" y="57.333333333333336" width="43.666666666666686" height="21.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -61,10 +61,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageViewCell" destination="uOF-FN-wIP" id="ygl-cg-SPe"/>
-                                            <outlet property="nameCell" destination="nCG-jw-aNA" id="grT-XX-F47"/>
-                                            <outlet property="priceCell" destination="PO6-bH-oQr" id="56p-Le-8Kz"/>
-                                            <segue destination="xeh-az-0ZW" kind="show" id="dwd-i2-wWH"/>
+                                            <outlet property="imageViewCell" destination="uOF-FN-wIP" id="pVI-BI-No1"/>
+                                            <outlet property="nameCell" destination="nCG-jw-aNA" id="TgZ-jZ-T57"/>
+                                            <outlet property="priceCell" destination="PO6-bH-oQr" id="ATf-sp-ppb"/>
+                                            <segue destination="xeh-az-0ZW" kind="show" identifier="segueToTicketDetail" id="dwd-i2-wWH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -86,7 +86,7 @@
                     <navigationItem key="navigationItem" id="Dce-zL-kp8">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="yTN-5t-5Py">
                             <textField key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Tickets" minimumFontSize="17" id="jZT-2I-n5t">
-                                <rect key="frame" x="20" y="5" width="148" height="34"/>
+                                <rect key="frame" x="16" y="5" width="148" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -105,21 +105,21 @@
         <!--Title-->
         <scene sceneID="4Ss-VC-RGQ">
             <objects>
-                <viewController id="xeh-az-0ZW" customClass="TicketDetailViewController" customModule="Mercury_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ticketDetailViewController" id="xeh-az-0ZW" customClass="TicketDetailViewController" customModule="Mercury_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="K78-mt-lIe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customItemCell" id="kXJ-U0-p93" customClass="CustomTableViewCell" customModule="Mercury_iOS_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ticketDetailTableViewCell" id="kXJ-U0-p93" customClass="TicketDetailTableViewCell" customModule="Mercury_iOS_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kXJ-U0-p93" id="6PZ-ck-BQ8">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kXJ-U0-p93" id="6PZ-ck-BQ8" customClass="TicketDetailTableViewCell" customModule="Mercury_iOS_App" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEs-P2-dXH">
-                                            <rect key="frame" x="11" y="11" width="90.5" height="68"/>
+                                            <rect key="frame" x="11" y="11" width="90.666666666666671" height="68"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="68" id="Ihm-CY-mSQ"/>
                                                 <constraint firstAttribute="width" constant="90.5" id="acU-2y-5nA"/>
@@ -127,13 +127,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oML-k3-3FZ">
-                                            <rect key="frame" x="109.5" y="11" width="47" height="21.5"/>
+                                            <rect key="frame" x="109.66666666666669" y="11.000000000000002" width="47" height="21.666666666666671"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeY-LT-8Kq">
-                                            <rect key="frame" x="350" y="57.5" width="44" height="21.5"/>
+                                            <rect key="frame" x="326.33333333333331" y="57.333333333333336" width="43.666666666666686" height="21.666666666666664"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jYs-YH-Lfl">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

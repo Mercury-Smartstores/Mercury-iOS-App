@@ -8,10 +8,10 @@ class TicketsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         dateFormatter.dateStyle = .short
         setUpElements()
-        tickets = fetchData()
+        tickets = fetchData() // As example
     }
     
     func setUpElements() {
@@ -21,8 +21,8 @@ class TicketsViewController: UIViewController {
     }
     
     func fetchData() -> [Ticket] {
-        let ticket1 = Ticket(date: Date(timeIntervalSinceReferenceDate: 123435456789.0), items: [Item(image: UIImage(named: "watermelon.png")!, name: "Watermelon", price: 1.45)]) // Since 2001
-        let ticket2 = Ticket(date: Date(timeIntervalSinceReferenceDate: 1234354556789.0), items: [Item(image: UIImage(named: "milk.png")!, name: "Milk", price: 0.99)])
+        let ticket1 = Ticket(date: Date(), items: [Item(image: UIImage(named: "orange.png")!, name: "Orange", price: 0.45), Item(image: UIImage(named: "milk.png")!, name: "Milk", price: 1.09)])
+        let ticket2 = Ticket(date: Date(timeIntervalSinceReferenceDate: 123435456789.0), items: [Item(image: UIImage(named: "milk.png")!, name: "Milk", price: 1.09)])
         return [ticket1, ticket2]
     }
     
@@ -35,7 +35,7 @@ extension TicketsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewsIds.customItemCell) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewsIds.ticketsTableViewCell) as! TicketsTableViewCell
         let ticket = tickets[indexPath.row]
         var total: Double = 0
         ticket.items.forEach({ item in
@@ -45,9 +45,17 @@ extension TicketsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToTicketDetail", let destinationViewController = segue.destination as? TicketDetailViewController {
+            if let cell = sender as? TicketsTableViewCell, let indexPath = ticketsTableView.indexPath(for: cell) {
+                destinationViewController.ticket = tickets[indexPath.row]
+            }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         if let selectionIndexPath = ticketsTableView.indexPathForSelectedRow {
             ticketsTableView.deselectRow(at: selectionIndexPath, animated: animated)
         }

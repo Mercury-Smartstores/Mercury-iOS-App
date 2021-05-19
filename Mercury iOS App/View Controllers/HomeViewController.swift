@@ -10,6 +10,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setUpElements()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.clientExitedShop), name: NSNotification.Name(rawValue: Constants.Notifications.clientExit), object: nil)
+    }
+    
+    @objc func clientExitedShop(_ notification: NSNotification) {
+        startShoppingButton.isEnabled = true
+        Client.shared.socket.disconnect()
     }
     
     func setUpElements() {

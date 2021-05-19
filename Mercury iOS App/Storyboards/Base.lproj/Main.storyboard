@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -90,6 +95,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="923.07692307692309" y="74.644549763033169"/>
+        </scene>
+        <!--Ticket Resume View Controller-->
+        <scene sceneID="fYr-Iw-yuV">
+            <objects>
+                <viewController storyboardIdentifier="ticketResumeViewController" id="6yo-Sf-t62" customClass="TicketResumeViewController" customModule="Mercury_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lyQ-Sh-vBl">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your purchase at Mercury" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El6-Cx-Hpo">
+                                <rect key="frame" x="28" y="96" width="337" height="31"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slG-y8-Zx0">
+                                <rect key="frame" x="28.000000000000004" y="175" width="52.333333333333343" height="23.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbj-0g-6nX">
+                                <rect key="frame" x="28" y="207" width="54" height="23.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MwR-tq-khA">
+                                <rect key="frame" x="28" y="254" width="337" height="535"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Although you didn't need anything, we're happy you've visited us :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgh-S5-Bdr">
+                                <rect key="frame" x="53" y="135" width="337" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                <color key="textColor" red="0.6371550413" green="0.18615162630000001" blue="0.16273973589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bwd-Ik-dWs"/>
+                        <color key="backgroundColor" red="0.6371550413" green="0.18615162630000001" blue="0.16273973589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bwd-Ik-dWs" firstAttribute="trailing" secondItem="MwR-tq-khA" secondAttribute="trailing" constant="25" id="2NR-UB-nKB"/>
+                            <constraint firstItem="Bwd-Ik-dWs" firstAttribute="bottom" secondItem="MwR-tq-khA" secondAttribute="bottom" constant="21" id="2XB-Zp-kB3"/>
+                            <constraint firstItem="Gbj-0g-6nX" firstAttribute="top" secondItem="slG-y8-Zx0" secondAttribute="bottom" constant="8.6699999999999999" id="7li-LS-xMm"/>
+                            <constraint firstItem="Gbj-0g-6nX" firstAttribute="leading" secondItem="Bwd-Ik-dWs" secondAttribute="leading" constant="28" id="DrO-Q6-P5X"/>
+                            <constraint firstItem="El6-Cx-Hpo" firstAttribute="leading" secondItem="Bwd-Ik-dWs" secondAttribute="leading" constant="28" id="I2a-Va-Rqx"/>
+                            <constraint firstItem="slG-y8-Zx0" firstAttribute="leading" secondItem="Bwd-Ik-dWs" secondAttribute="leading" constant="28" id="Wq6-ew-Vpd"/>
+                            <constraint firstItem="slG-y8-Zx0" firstAttribute="top" secondItem="El6-Cx-Hpo" secondAttribute="bottom" constant="48" id="bWo-DI-Wnw"/>
+                            <constraint firstItem="MwR-tq-khA" firstAttribute="leading" secondItem="Bwd-Ik-dWs" secondAttribute="leading" constant="28" id="gX1-6c-XVB"/>
+                            <constraint firstItem="MwR-tq-khA" firstAttribute="top" secondItem="Gbj-0g-6nX" secondAttribute="bottom" constant="23.670000000000002" id="jc7-ZH-oGL"/>
+                            <constraint firstItem="El6-Cx-Hpo" firstAttribute="top" secondItem="Bwd-Ik-dWs" secondAttribute="top" constant="52" id="p1H-1q-QNO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="slG-y8-Zx0" id="YpW-5e-0fL"/>
+                        <outlet property="emptyCartLabel" destination="Zgh-S5-Bdr" id="L0T-bP-rMJ"/>
+                        <outlet property="itemsTableView" destination="MwR-tq-khA" id="FOy-cL-ED0"/>
+                        <outlet property="totalPriceLabel" destination="Gbj-0g-6nX" id="3jI-qO-WhF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NS-lL-e6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444.6153846153845" y="741.46919431279616"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qHO-Ng-1Xd">
@@ -251,13 +321,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fVl-VQ-aF6"/>
         <segue reference="xOC-Gf-3tx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Mercury" width="498" height="167"/>
         <image name="Mercury M" width="500" height="500"/>
         <image name="white-cross" width="175" height="164"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

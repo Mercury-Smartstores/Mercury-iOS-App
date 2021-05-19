@@ -23,6 +23,9 @@ class Client {
             }
             
         }
+        socket.on("exit store") { (data, ack) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constants.Notifications.clientExit), object: nil)
+        }
     }
     
     static let shared = Client()
