@@ -16,6 +16,7 @@ struct Constants {
         static let cartTableViewCell: String = "cartTableViewCell"
         static let ticketsTableViewCell: String = "ticketsTableViewCell"
         static let ticketDetailTableViewCell: String = "ticketDetailTableViewCell"
+        static let ticketResumeTableViewCell: String = "ticketResumeTableViewCell"
     }
     
     struct Colors {
@@ -37,6 +38,7 @@ struct Constants {
         static let addItemToCart: String = "addItemToCart"
         static let removeItemFromCart: String = "removeItemFromCart"
         static let clientExit: String = "clientExit"
+        static let explanationRequest: String = "explanationRequest"
     }
     
 }

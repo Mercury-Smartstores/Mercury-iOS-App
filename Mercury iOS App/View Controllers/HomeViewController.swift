@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
     
     @objc func clientExitedShop(_ notification: NSNotification) {
         startShoppingButton.isEnabled = true
-        Client.shared.socket.disconnect()
     }
     
     func setUpElements() {

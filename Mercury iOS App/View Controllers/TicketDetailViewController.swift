@@ -6,14 +6,6 @@ class TicketDetailViewController: UIViewController {
     var ticket: Ticket?
     let dateFormatter = DateFormatter()
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.ticketTableView.reloadData()
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dateFormatter.dateStyle = .short

@@ -125,6 +125,65 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MwR-tq-khA">
                                 <rect key="frame" x="28" y="254" width="337" height="535"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ticketResumeTableViewCell" rowHeight="90" id="uZj-Xc-wZa" customClass="TicketResumeTableViewCell" customModule="Mercury_iOS_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="337" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uZj-Xc-wZa" id="m7f-Th-qf6">
+                                            <rect key="frame" x="0.0" y="0.0" width="337" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rvy-bZ-N4B">
+                                                    <rect key="frame" x="20.000000000000007" y="11" width="90.666666666666686" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="88" id="464-uu-8yC"/>
+                                                        <constraint firstAttribute="width" secondItem="rvy-bZ-N4B" secondAttribute="height" multiplier="4:3" id="mb0-yR-SsZ"/>
+                                                        <constraint firstAttribute="height" constant="68" id="oQM-he-xzF"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yD0-S2-Rbe">
+                                                    <rect key="frame" x="123.99999999999999" y="13" width="51.333333333333329" height="22"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL1-BT-gIM">
+                                                    <rect key="frame" x="283.33333333333331" y="58.000000000000007" width="39.666666666666686" height="19.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6w-yG-mOY">
+                                                    <rect key="frame" x="123.99999999999999" y="56" width="24.333333333333329" height="22"/>
+                                                    <state key="normal" image="questionmark.video" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="explanationRequested:" destination="uZj-Xc-wZa" eventType="touchUpInside" id="2h4-8Y-YN3"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rvy-bZ-N4B" firstAttribute="leading" secondItem="m7f-Th-qf6" secondAttribute="leadingMargin" id="BjC-Xx-Egs"/>
+                                                <constraint firstItem="T6w-yG-mOY" firstAttribute="leading" secondItem="rvy-bZ-N4B" secondAttribute="trailing" constant="13.33" id="IMA-BH-v62"/>
+                                                <constraint firstItem="yD0-S2-Rbe" firstAttribute="top" secondItem="m7f-Th-qf6" secondAttribute="topMargin" constant="2" id="OmN-qt-fBh"/>
+                                                <constraint firstAttribute="trailing" secondItem="GL1-BT-gIM" secondAttribute="trailing" constant="14" id="VbM-fB-fFr"/>
+                                                <constraint firstItem="yD0-S2-Rbe" firstAttribute="leading" secondItem="rvy-bZ-N4B" secondAttribute="trailing" constant="13.33" id="WYz-HT-8T8"/>
+                                                <constraint firstAttribute="bottom" secondItem="GL1-BT-gIM" secondAttribute="bottom" constant="12.67" id="iZF-A8-Zqa"/>
+                                                <constraint firstItem="rvy-bZ-N4B" firstAttribute="top" secondItem="m7f-Th-qf6" secondAttribute="topMargin" id="rEq-wY-0tk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="T6w-yG-mOY" secondAttribute="bottom" constant="1" id="ruF-Ns-kzh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="explanationButton" destination="T6w-yG-mOY" id="jIC-rO-YUD"/>
+                                            <outlet property="itemImage" destination="rvy-bZ-N4B" id="zI7-N2-axY"/>
+                                            <outlet property="nameLabel" destination="yD0-S2-Rbe" id="QPm-ec-k7e"/>
+                                            <outlet property="priceLabel" destination="GL1-BT-gIM" id="9wj-ql-9mf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6yo-Sf-t62" id="1ED-F9-VGp"/>
+                                    <outlet property="delegate" destination="6yo-Sf-t62" id="GI4-jM-f68"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Although you didn't need anything, we're happy you've visited us :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgh-S5-Bdr">
                                 <rect key="frame" x="53" y="135" width="337" height="85"/>
@@ -326,6 +385,7 @@
     <resources>
         <image name="Mercury" width="498" height="167"/>
         <image name="Mercury M" width="500" height="500"/>
+        <image name="questionmark.video" catalog="system" width="128" height="83"/>
         <image name="white-cross" width="175" height="164"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -12,6 +12,7 @@ class TicketResumeViewController: UIViewController {
         super.viewDidLoad()
         setUpElements()
         configureTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.explanationButtonTapped), name: NSNotification.Name(rawValue: Constants.Notifications.explanationRequest), object: nil)
     }
     
     func setUpElements() {
@@ -41,10 +42,20 @@ class TicketResumeViewController: UIViewController {
         itemsTableView.layer.cornerRadius = 10
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         items = []
         itemsTableView.reloadData()
+        Client.shared.socket.disconnect()
     }
+    
+    @objc func explanationButtonTapped(notification: Notification) {
+        if let cell = notification.userInfo?["cell"] as? TicketResumeTableViewCell {
+            let indexPath = itemsTableView.indexPath(for: cell)
+            let item = items[indexPath!.row]
+            Client.shared.socket.emit("request explanation", ["name": item.name, "price": item.price]) // TODO: display video
+        }
+    }
+    
 }
 
 extension TicketResumeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -54,10 +65,10 @@ extension TicketResumeViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewsIds.cartTableViewCell) as! CartTableViewCell // TODO: change this and create a specific one for this class
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewsIds.ticketResumeTableViewCell) as! TicketResumeTableViewCell
         let item = items[indexPath.row]
         cell.set(item: item)
         return cell
     }
-    
+        
 }
