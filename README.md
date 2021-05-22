@@ -32,7 +32,7 @@ Then, you will need to download or clone [Mercury Client Manager](https://github
 
 First of all, you should run the Client Manager by executing
 ```
-node server.js
+npm start
 ```
 in [Mercury Client Manager](https://github.com/Mercury-Smartstores/Mercury-Client-Manager) package.
 
