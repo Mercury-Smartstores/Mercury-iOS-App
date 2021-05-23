@@ -1,4 +1,5 @@
 import UIKit
+import AVKit
 
 class TicketResumeViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
@@ -7,12 +8,15 @@ class TicketResumeViewController: UIViewController {
     let dateFormatter: DateFormatter = DateFormatter()
     @IBOutlet weak var emptyCartLabel: UILabel!
     @IBOutlet weak var itemsTableView: UITableView!
+    var videoPlaying: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
         configureTableView()
         NotificationCenter.default.addObserver(self, selector: #selector(self.explanationButtonTapped), name: NSNotification.Name(rawValue: Constants.Notifications.explanationRequest), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.displayExplanationVideo), name: NSNotification.Name(rawValue: Constants.Notifications.displayExplanationVideo), object: nil)
+        videoPlaying = false
     }
     
     func setUpElements() {
@@ -43,16 +47,30 @@ class TicketResumeViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        items = []
-        itemsTableView.reloadData()
-        Client.shared.socket.disconnect()
+        if !videoPlaying {
+            items = []
+            itemsTableView.reloadData()
+            Client.shared.socket.disconnect()
+        }
     }
     
     @objc func explanationButtonTapped(notification: Notification) {
         if let cell = notification.userInfo?["cell"] as? TicketResumeTableViewCell {
             let indexPath = itemsTableView.indexPath(for: cell)
             let item = items[indexPath!.row]
-            Client.shared.socket.emit("request explanation", ["name": item.name, "price": item.price]) // TODO: display video
+            Client.shared.socket.emit("request explanation", ["name": item.name, "price": item.price])
+        }
+    }
+    
+    @objc func displayExplanationVideo(notification: Notification) {
+        videoPlaying = true
+        let url = notification.userInfo!["url"] as! String
+        let index = url.index(url.endIndex, offsetBy: -(url.count - 6))
+        let player = AVPlayer(url: URL(fileURLWithPath: String(url[index...])))
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        present(playerController, animated: true) {
+            player.play()
         }
     }
     
@@ -70,5 +88,5 @@ extension TicketResumeViewController: UITableViewDelegate, UITableViewDataSource
         cell.set(item: item)
         return cell
     }
-        
+    
 }

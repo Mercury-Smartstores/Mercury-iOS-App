@@ -28,6 +28,7 @@
 		65B4A1C72634336500F0CF20 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B4A1C62634336500F0CF20 /* Home.storyboard */; };
 		65B4A1CA2634337600F0CF20 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B4A1C92634337600F0CF20 /* Cart.storyboard */; };
 		65B4A1CD2634338000F0CF20 /* Tickets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B4A1CC2634338000F0CF20 /* Tickets.storyboard */; };
+		65B669682659D93200BD9C5D /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B669672659D93200BD9C5D /* FileUtils.swift */; };
 		65E5B716262DEE550046D07B /* DesignHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E5B715262DEE550046D07B /* DesignHandler.swift */; };
 		65F24FBA2653FBB900A398B5 /* TicketResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F24FB92653FBB900A398B5 /* TicketResumeViewController.swift */; };
 		65F24FBE26550B2D00A398B5 /* TicketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F24FBD26550B2D00A398B5 /* TicketsTableViewCell.swift */; };
@@ -64,6 +65,7 @@
 		65B4A1C62634336500F0CF20 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		65B4A1C92634337600F0CF20 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		65B4A1CC2634338000F0CF20 /* Tickets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tickets.storyboard; sourceTree = "<group>"; };
+		65B669672659D93200BD9C5D /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		65E5B715262DEE550046D07B /* DesignHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignHandler.swift; sourceTree = "<group>"; };
 		65F24FB92653FBB900A398B5 /* TicketResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketResumeViewController.swift; sourceTree = "<group>"; };
 		65F24FBD26550B2D00A398B5 /* TicketsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsTableViewCell.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				65FA8106262DAE39003CD2DA /* ErrorHandler.swift */,
 				65E5B715262DEE550046D07B /* DesignHandler.swift */,
 				6527D7E7263C31CE00402829 /* UIViewExt.swift */,
+				65B669672659D93200BD9C5D /* FileUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				65B4A1C3263431C700F0CF20 /* TicketsViewController.swift in Sources */,
 				65179A78262C9E1A00B9D8F4 /* HomeViewController.swift in Sources */,
 				65FA80E9262D8A32003CD2DA /* Constants.swift in Sources */,
+				65B669682659D93200BD9C5D /* FileUtils.swift in Sources */,
 				65A3A3FC263C041D0011BD46 /* Client.swift in Sources */,
 				654C72DB265138E90080C013 /* TicketDetailViewController.swift in Sources */,
 				65FA8104262DACC6003CD2DA /* ViewTransition.swift in Sources */,

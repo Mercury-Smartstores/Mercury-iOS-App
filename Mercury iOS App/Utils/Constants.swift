@@ -39,6 +39,7 @@ struct Constants {
         static let removeItemFromCart: String = "removeItemFromCart"
         static let clientExit: String = "clientExit"
         static let explanationRequest: String = "explanationRequest"
+        static let displayExplanationVideo: String = "displayExplanationVideo"
     }
     
 }
