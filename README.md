@@ -18,9 +18,9 @@ Tickets           |  Ticket in detail
 :-------------------------:|:-------------------------:
 <img src="https://github.com/Mercury-Smartstores/Mercury-iOS-App/blob/main/readme-assets/App-tickets.png" alt="Tickets screen" width="250"/>  |  <img src="https://github.com/Mercury-Smartstores/Mercury-iOS-App/blob/main/readme-assets/App-ticket-detail.png" alt="Ticket in detail" width="250"/> 
 
-Ticket resume          |  Ticket resume when no purchase
-:-------------------------:|:-------------------------:
-<img src="https://github.com/Mercury-Smartstores/Mercury-iOS-App/blob/main/readme-assets/App-purchase.png" alt="Ticket resume" width="250"/>  |  <img src="https://github.com/Mercury-Smartstores/Mercury-iOS-App/blob/main/readme-assets/App-no-purchase.png" alt="Ticket resume (no purchase)" width="250"/> 
+Ticket resume          |  Ticket resume when no purchase          |  Explanation video displayed
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/Mercury-Smartstores/Mercury-iOS-App/blob/main/readme-assets/App-purchase.png" alt="Ticket resume" width="250"/>  |  <img src="https://github.com/Mercury-Smartstores/Mercury-iOS-App/blob/main/readme-assets/App-no-purchase.png" alt="Ticket resume (no purchase)" width="250"/> |  <img src="https://github.com/Mercury-Smartstores/Mercury-iOS-App/blob/main/readme-assets/App-explanation.png" alt="Explanation" width="250"/> 
   
 ### 🔧 Installation
 
